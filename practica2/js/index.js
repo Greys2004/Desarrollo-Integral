@@ -1,0 +1,10 @@
+var miNumero = 5;
+miNumero = 10 + 10;
+miNumero = 2.5;
+console.log(miNumero);
+var booleano = false;
+booleano = true;
+console.log(booleano);
+var encendido;
+encendido = true;
+console.log(encendido);
