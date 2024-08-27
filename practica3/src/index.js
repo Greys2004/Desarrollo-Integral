@@ -82,21 +82,15 @@ miArray5.push(25);
 miArray5.push('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR38X4moy3jvdb44PAPjx6FrPYGaQUAnwsUTw&s');
 const miArray5Div = document.getElementById('miArray5');
 if (miArray5Div) {
-    // Inicia el HTML con una lista desordenada
     let html = '<ul>';
-    // Recorre cada elemento del array
     for (const item of miArray5) {
-        // Si el elemento es una URL (comienza con 'http')
         if (typeof item === 'string' && item.startsWith('http')) {
-            // Añade una imagen en lugar de texto
             html += `<li><img src="${item}" alt="Imagen" style="max-width: 200px; max-height: 200px;"></li>`;
         }
         else {
-            // Añade el elemento como texto en una lista
             html += `<li>${item}</li>`;
         }
     }
-    // Cierra la lista desordenada
     html += '</ul>';
     // Inserta el HTML en el elemento del DOM
     miArray5Div.innerHTML = html;

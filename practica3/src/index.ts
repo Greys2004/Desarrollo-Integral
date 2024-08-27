@@ -98,12 +98,19 @@ miArray5.push('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR38X4moy3jv
 const miArray5Div = document.getElementById('miArray5');
 
 if (miArray5Div) {
-    miArray5Div.innerHTML = '<ul>' +
-        miArray5.map(item => {
+    let html = '<ul>';
+
+        for (const item of miArray5) {
             if (typeof item === 'string' && item.startsWith('http')) {
-                return `<li><img src="${item}" alt="Imagen" style="max-width: 200px; max-height: 200px;"></li>`;
+                html += `<li><img src="${item}" alt="Imagen" style="max-width: 200px; max-height: 200px;"></li>`;
+            } else {
+
+                html += `<li>${item}</li>`;
             }
-            return `<li>${item}</li>`;
-        }).join('') +
-        '</ul>';
+        }
+
+    html += '</ul>';
+
+    // Inserta el HTML en el elemento del DOM
+    miArray5Div.innerHTML = html;
 }
