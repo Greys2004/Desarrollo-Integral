@@ -44,3 +44,4 @@ function generateFibonacci(n) {
 }
 const fibonacciSeries = generateFibonacci(100);
 console.log(fibonacciSeries);
+const primeros10 = generateFibonacci(20);
