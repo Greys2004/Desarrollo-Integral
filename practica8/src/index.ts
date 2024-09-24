@@ -37,21 +37,6 @@ function saludo (nombre: string): string {
     return `Hola ${nombre}`;
 }
 
-//No retorna nada== void
-function advertencia():void{
-    console.log('Cuidado');
-}
-advertencia();
-
-//Never no retorna nada y no tiene fin
-function error(mensaje: string): never {
-    let mensajeError: any = document.getElementById("mensajeError");
-    mensajeError.innerHTML ="Error en la aplicacion";
-
-    throw new Error(mensaje);
-}
-//error("Error en la aplicacion");
-
 type accion = 'sumar' | 'restar' | 'multiplicar';
 function operation(a:number,b:number,operacion:accion):number{
     if(operacion === 'sumar')
@@ -75,3 +60,24 @@ const operation3 = (a:number,b:number,operacion:accion):number => operacion === 
 console.log(operation3(6, 2, 'sumar'));
 console.log(operation3(10, 2, 'restar'));
 console.log(operation3(2, 4, 'multiplicar'));
+
+//No retorna nada== void
+function advertencia():void{
+    console.log('Cuidado');
+}
+advertencia();
+
+//Never no retorna nada y no tiene fin
+function error(mensaje: string): never {
+    let mensajeError: HTMLElement | null = document.getElementById("mensajeError");
+
+    // Verificar que el elemento existe antes de modificarlo
+    if (mensajeError) {
+        mensajeError.innerHTML = "Error en la aplicacion";
+    } else {
+        console.error("Elemento con id 'mensajeError' no encontrado.");
+    }
+
+    throw new Error(mensaje);
+}
+error("Error en la aplicacion");

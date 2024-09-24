@@ -1,5 +1,6 @@
-var mensaje = 'Hola TS';
+"use strict";
+let mensaje = 'Hola TS';
 console.log(mensaje);
-var numero = 10;
+let numero = 10;
 numero = 20;
 console.log(numero);
