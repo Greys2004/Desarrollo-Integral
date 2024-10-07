@@ -19,4 +19,4 @@ app.listen(3000, () => {
 
 //nodemon es una herramienta que ayuda a desarrollar aplicaciones basadas en node.js reiniciando automáticamente la aplicación de node cuando se detectan cambios de archivo en el directorio.
 //Sirve para no estar poniendo continuamente "node index.js"
-//nodemon install nodemon
+//npm install nodemon
