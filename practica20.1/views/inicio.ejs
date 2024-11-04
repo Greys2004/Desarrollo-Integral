@@ -1,0 +1,26 @@
+<%- include('./encabezado.ejs')%>
+    <div>
+        <h1><%= titulo%></h1>
+    </div>
+    <% if(blogs.length > 0){ %>
+        <% blogs.forEach( blog =>{ %>
+            <li>
+                <h3><%= blog.titulo %></h3>
+                <h3><%= blog.autor %></h3>
+                <h3><%= blog.contenido %></h3>
+            </li>
+        <% }) %>   
+    <% }else{ %>
+        <p>No se encontra tu blog, naquete </p>
+    <% }%>  
+   <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/nosotros">Nosotros</a></li>
+            <li><a href="/productos">Productos</a></li>
+        </ul>
+    </nav>
+
+    <script src="../index.js"></script>
+</body>
+</html>
